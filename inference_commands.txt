@@ -1,0 +1,18 @@
+Inference command for nnU-Net v2
+
+Input files should be CT images in NIfTI format (.nii.gz) following the nnU-Net v2 naming convention.
+
+Example input filenames:
+case001_0000.nii.gz
+case002_0000.nii.gz
+
+Command:
+
+nnUNetv2_predict \
+  -i /path/to/input_images \
+  -o /path/to/output_segmentations \
+  -d Dataset001_Muscle \
+  -c 3d_fullres \
+  -f all \
+  -tr nnUNetTrainer \
+  -p nnUNetPlans
